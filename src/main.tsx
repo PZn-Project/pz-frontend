@@ -3,12 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from '@App/App.tsx'
 import '@Styles/index.scss'
 
-import ErrorBoundary from './app/ErrorBoundary.tsx'
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ErrorBoundary>
-      <App />
-    </ErrorBoundary>
+    <App />
   </React.StrictMode>,
 )

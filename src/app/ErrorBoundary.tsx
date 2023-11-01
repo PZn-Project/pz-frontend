@@ -1,16 +1,18 @@
-import React, { ReactNode } from 'react'
-import ErrorPage from '../pages/Error'
+import {
+  type ReactElement,
+  PropsWithChildren,
+  Component,
+  ErrorInfo,
+} from 'react'
 
-interface IProps {
-  children: ReactNode | ReactNode[]
-}
+type ErrorBoundaryProps = PropsWithChildren<{ fallback: ReactElement }>
 
-interface IState {
+type ErrorBoundaryState = {
   hasError: boolean
 }
 
-class ErrorBoundary extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props)
     this.state = { hasError: false }
   }
@@ -19,9 +21,14 @@ class ErrorBoundary extends React.Component<IProps, IState> {
     return { hasError: true }
   }
 
+  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
+    console.log(error)
+    console.log(errorInfo)
+  }
+
   render() {
     if (this.state.hasError) {
-      return <ErrorPage />
+      return this.props.fallback
     }
 
     return this.props.children
