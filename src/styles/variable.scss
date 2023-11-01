@@ -1,0 +1,75 @@
+//------------ COLORS --------------//
+$color-pl: #00cc56; //  Primary Light
+$color-pd: #008035; //  Primary Dark
+$color-sl: #4ca6ff; //  Secondary Light
+$color-sd: #0050b2; //  Secondary Dark
+$color-rl: #ff3333; //  Red Light
+$color-rd: #b20000; //  Red Dark
+
+$color-white: #fcfcfc;
+$color-black: #070808;
+
+$color-gray-100: #e5e6e5;
+$color-gray-200: #cacecc;
+$color-gray-300: #b0b5b2;
+$color-gray-400: #969c98;
+$color-gray-500: #7c837f;
+$color-gray-600: #636965;
+$color-gray-700: #4a4f4c;
+$color-gray-800: #313533;
+$color-gray-900: #191a19;
+
+//-------------- FONT ---------------//
+$font-xs: 1.2rem; // 12px
+$font-s: 1.4rem; // 14px
+$font-m: 1.6rem; // 16px
+$font-l: 1.8rem; // 18px
+$font-xl: 2rem; // 20px
+
+$header-xs: 2.4rem; // 24px
+$header-s: 2.8rem; // 28px
+$header-m: 3.2rem; // 32px
+$header-l: 3.6rem; // 36px
+$header-xh: 4.8rem; // 48px
+
+//----------  FONT WEIGHT ------------//
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-bold: 700;
+
+//---------- BREAKPOINTS ------------//
+$bp-mobile: 642px; // 642px  -> 100vw
+$bp-tablet: 966px; // 982px  -> 626px
+$bp-desktop: 1290px; // 1290px  -> 950px
+
+//------------  RADIUS --------------//
+$radius-xs: 0.4rem; //4px
+$radius-s: 0.8rem; //8px
+$radius-m: 1.6rem; //16px
+$radius-l: 2.4rem; //24px
+$radius-xl: 3.2rem; //32px
+
+//------------ SPACING --------------//
+$space-xs: 0.8rem; // 8px
+$space-s: 1.6rem; // 16px
+$space-m: 2.4rem; // 24px
+$space-l: 4.8rem; // 48px
+$space-xl: 6.4rem; // 64px
+$space-h: 9.6rem; //96px
+$space-xh: 12.4rem; // 124px
+
+//------------  MIXINS --------------//
+
+@mixin maxWidth($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@include maxWidth($bp-desktop) {
+}
+@include maxWidth($bp-tablet) {
+}
+@include maxWidth($bp-mobile) {
+}
