@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import ErrorPage from './pages/Error'
+import ErrorPage from '../pages/Error'
 
 interface IProps {
   children: ReactNode | ReactNode[]
