@@ -1,0 +1,96 @@
+@import 'src/styles/variable.scss';
+
+.header {
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-s;
+  background-color: $color-white;
+
+  @include maxWidth($bp-mobile) {
+    height: 54px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1322px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 $space-m;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include maxWidth($bp-mobile) {
+    padding: 0 $space-s;
+  }
+}
+
+.logo {
+  width: 210px;
+  height: 48px;
+
+  @include maxWidth($bp-tablet) {
+    width: 140px;
+    height: 32px;
+  }
+}
+
+.navList {
+  display: flex;
+  gap: $space-m;
+
+  @include maxWidth($bp-mobile) {
+    display: none;
+  }
+}
+
+.navLink {
+  color: $color-gray-600;
+  font-size: $header-s;
+
+  &:hover {
+    color: $color-black;
+  }
+}
+
+.navButton {
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include maxWidth($bp-mobile) {
+    display: block;
+  }
+
+  & svg {
+    width: 28px;
+    height: 28px;
+    color: $color-black;
+  }
+}
+
+.activeLink {
+  position: relative;
+  padding-bottom: 0.4rem;
+  color: $color-black;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(90deg, $color-pl, $color-sl);
+    transition: width 0.25s ease-out;
+  }
+}

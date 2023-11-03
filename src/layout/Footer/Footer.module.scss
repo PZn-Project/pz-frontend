@@ -1,0 +1,144 @@
+@import 'src/styles/variable.scss';
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-black;
+}
+
+.container {
+  width: 100%;
+  max-width: 1322px;
+  height: 100%;
+  margin: $space-l auto $space-l;
+  padding: 0 $space-m;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  align-items: end;
+  gap: $space-m;
+  @include maxWidth($bp-mobile) {
+    justify-content: center;
+  }
+
+  &Logo {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $space-m;
+
+    @include maxWidth($bp-tablet) {
+      gap: $space-xs;
+    }
+
+    img {
+      width: 210px;
+      height: 48px;
+
+      @include maxWidth($bp-tablet) {
+        width: 140px;
+        height: 32px;
+      }
+    }
+
+    p {
+      color: $color-white;
+      font-size: $header-s;
+      font-weight: $weight-light;
+
+      @include maxWidth($bp-tablet) {
+        font-size: $header-xs;
+      }
+    }
+  }
+
+  &List {
+    padding-right: $space-xs;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $space-m;
+
+    @include maxWidth($bp-tablet) {
+      gap: $space-s;
+    }
+  }
+
+  &Link {
+    color: $color-white;
+    font-size: $header-s;
+
+    @include maxWidth($bp-tablet) {
+      font-size: $header-xs;
+    }
+
+    &:hover {
+      color: $color-sl;
+    }
+  }
+}
+
+.hr {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: $space-xs 0;
+  border: none;
+  background: linear-gradient(90deg, $color-pl 15%, $color-sl);
+}
+
+.media {
+  margin-top: $space-l;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $space-l;
+
+  @include maxWidth($bp-tablet) {
+    gap: $space-m;
+  }
+
+  &Link {
+    display: flex;
+    color: $color-pl;
+    font-size: $header-s;
+
+    @include maxWidth($bp-mobile) {
+      width: 102px;
+      font-size: $header-xs;
+    }
+
+    svg {
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      min-height: 20px;
+      margin-right: $space-xs;
+      transform: translateY(3px);
+    }
+
+    &:hover {
+      background: -webkit-linear-gradient(180deg, $color-sl, $color-pl);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.rights {
+  margin: $space-l auto;
+  text-align: center;
+  font-size: $font-xs;
+  color: $color-white;
+}
