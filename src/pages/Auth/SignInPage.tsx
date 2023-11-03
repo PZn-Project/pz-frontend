@@ -1,5 +1,6 @@
 import { type ReactElement } from 'react'
+import WidePageLayout from '@Layout/Page/WidePageLayout'
 
 export const SignInPage = (): ReactElement => {
-  return <div>Sign In</div>
+  return <WidePageLayout>Sign In</WidePageLayout>
 }

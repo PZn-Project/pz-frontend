@@ -45,3 +45,28 @@ h6 {
 ul {
   list-style-type: none;
 }
+
+
+
+.link-hover {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+
+.link-hover::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-image: linear-gradient(90deg, $color-pl, $color-sl);
+  transition: width 0.25s ease-out;
+}
+
+.link-hover:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
