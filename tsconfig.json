@@ -22,7 +22,8 @@
       "@Containers/*": ["src/components/*"],
       "@Pages/*": ["src/pages/*"],
       "@Styles/*": ["src/styles/*"],
-      "@Utils/*": ["src/utils/*"]
+      "@Utils/*": ["src/utils/*"],
+      "@Redux/*": ["src/redux/*"]
     },
 
     /* Linting */

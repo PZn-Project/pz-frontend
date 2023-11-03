@@ -1,7 +1,20 @@
 import { type ReactElement } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { TRootState } from '@Redux/store'
+
+import { addGame, clear } from '@Redux/gameSlice'
 
 const HomePage = (): ReactElement => {
-  return <div>Home Page</div>
+  const games = useSelector<TRootState, string[]>((state) => state.game.games)
+  const dispatch = useDispatch()
+
+  return (
+    <div>
+      Games: {games}
+      <button onClick={() => dispatch(addGame())}>ADD GAME</button>
+      <button onClick={() => dispatch(clear())}>CLEAR STORE</button>
+    </div>
+  )
 }
 
 export default HomePage
