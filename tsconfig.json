@@ -19,7 +19,7 @@
       "@App/*": ["src/app/*"],
       "@Assets/*": ["src/assets/*"],
       "@Components/*": ["src/components/*"],
-      "@Containers/*": ["src/components/*"],
+      "@Containers/*": ["src/containers/*"],
       "@Layout/*": ["src/layout/*"],
       "@Pages/*": ["src/pages/*"],
       "@Styles/*": ["src/styles/*"],

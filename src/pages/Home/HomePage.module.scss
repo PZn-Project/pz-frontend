@@ -1,0 +1,9 @@
+@import 'src/styles/variable.scss';
+
+.container {
+  margin: $space-h 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-xl;
+}
