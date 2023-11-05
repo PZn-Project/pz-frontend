@@ -1,0 +1,18 @@
+@import 'src/styles/variable.scss';
+
+.features {
+  max-width: 948px;
+  margin-top: $space-uh;
+  margin-right: $space-xs;
+  margin-left: $space-xs;
+  margin-bottom: $space-h;
+  display: flex;
+  gap: $space-m;
+  flex-direction: column;
+
+  @include maxWidth($bp-mobile) {
+    margin-top: $space-l;
+    margin-bottom: $space-xs;
+    gap: 0;
+  }
+}
