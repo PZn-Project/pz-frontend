@@ -1,1 +1,1 @@
-export { Feature } from './Feature'
+export { Feature } from './Feature/Feature'

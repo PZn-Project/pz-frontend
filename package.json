@@ -17,12 +17,14 @@
     "@tanstack/react-query-devtools": "^5.8.4",
     "axios": "^1.6.2",
     "clsx": "^2.0.0",
+    "ramda": "^0.29.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.18.0"
   },
   "devDependencies": {
+    "@types/ramda": "^0.29.9",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@types/react-router-dom": "^5.3.3",

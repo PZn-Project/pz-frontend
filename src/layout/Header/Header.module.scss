@@ -22,13 +22,13 @@
   max-width: 1322px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 $space-m;
+  padding: 0 $space-24;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   @include maxWidth($bp-mobile) {
-    padding: 0 $space-s;
+    padding: 0 $space-16;
   }
 }
 
@@ -44,7 +44,7 @@
 
 .navList {
   display: flex;
-  gap: $space-m;
+  gap: $space-24;
 
   @include maxWidth($bp-mobile) {
     display: none;
@@ -53,7 +53,7 @@
 
 .navLink {
   color: $color-gray-600;
-  font-size: $header-s;
+  font-size: $header-18;
 
   &:hover {
     color: $color-black;
