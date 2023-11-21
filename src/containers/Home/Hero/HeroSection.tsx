@@ -1,11 +1,9 @@
 import { type ReactElement, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
-
-import { ROUTES } from '@App/config'
-import styles from './HeroSection.module.scss'
-
+import { ROUTES } from '@Router/routes'
 import { ACTIONS, IMAGES } from './data'
+import styles from './HeroSection.module.scss'
 
 export const HeroSection = (): ReactElement => {
   const [index, setIndex] = useState<number>(0)

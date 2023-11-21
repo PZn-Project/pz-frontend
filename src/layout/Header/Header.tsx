@@ -2,10 +2,9 @@ import { type ReactElement, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import clsx from 'clsx'
 import { VscMenu, VscChromeClose } from 'react-icons/vsc'
-import styles from './Header.module.scss'
-import { NAVIGATION_DATA } from './data'
-
 import logo from '@Assets/svg/logo-black.svg'
+import { NAVIGATION_DATA } from './data'
+import styles from './Header.module.scss'
 
 const Header = (): ReactElement => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)

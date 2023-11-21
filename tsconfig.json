@@ -24,7 +24,8 @@
       "@Pages/*": ["src/pages/*"],
       "@Styles/*": ["src/styles/*"],
       "@Utils/*": ["src/utils/*"],
-      "@Redux/*": ["src/redux/*"]
+      "@Store/*": ["src/store/*"],
+      "@Router/*": ["src/router/*"]
     },
 
     /* Linting */
