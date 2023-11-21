@@ -8,7 +8,7 @@ import {
 
 export const NAVIGATION_DATA = [
   { label: 'Home', path: ROUTES.HOME },
-  { label: 'Rejestracja', path: ROUTES.SIGN_UP },
+  { label: 'Zaloguj', path: ROUTES.SIGN_UP },
 ]
 
 export const MEDIA_LINKS = [
