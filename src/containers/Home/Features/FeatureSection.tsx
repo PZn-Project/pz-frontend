@@ -1,8 +1,7 @@
 import { type ReactElement } from 'react'
 import { Feature } from '@Components/Home'
-
-import styles from './FeatureSection.module.scss'
 import { FEATURS_DATA } from './data'
+import styles from './FeatureSection.module.scss'
 
 export const FeatureSection = (): ReactElement => {
   return (

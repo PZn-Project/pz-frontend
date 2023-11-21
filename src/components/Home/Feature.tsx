@@ -1,8 +1,7 @@
 import { type ReactElement } from 'react'
 import { IconType } from 'react-icons'
-
-import styles from './Feature.module.scss'
 import clsx from 'clsx'
+import styles from './Feature.module.scss'
 
 type FeatureProps = {
   title: string

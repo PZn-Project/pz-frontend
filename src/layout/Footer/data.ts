@@ -1,4 +1,4 @@
-import { ROUTES } from '@App/config'
+import { ROUTES } from '@Router/routes'
 import {
   FaFacebook,
   FaInstagramSquare,
@@ -8,7 +8,7 @@ import {
 
 export const NAVIGATION_DATA = [
   { label: 'Home', path: ROUTES.HOME },
-  { label: ' Sign Up', path: ROUTES.SIGN_UP },
+  { label: 'Rejestracja', path: ROUTES.SIGN_UP },
 ]
 
 export const MEDIA_LINKS = [

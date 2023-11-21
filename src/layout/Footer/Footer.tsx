@@ -1,10 +1,9 @@
 import { type ReactElement } from 'react'
 import { Link } from 'react-router-dom'
+import clsx from 'clsx'
+import logo from '@Assets/svg/logo-white.svg'
 import { MEDIA_LINKS, NAVIGATION_DATA } from './data'
 import styles from './Footer.module.scss'
-
-import logo from '@Assets/svg/logo-white.svg'
-import clsx from 'clsx'
 
 const Footer = (): ReactElement => {
   return (

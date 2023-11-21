@@ -1,7 +1,6 @@
 import { type ReactElement } from 'react'
-import styles from './ErrorContainer.module.scss'
 import WidePageLayout from '@Layout/Page/WidePageLayout'
-
+import styles from './ErrorContainer.module.scss'
 
 export const ErrorPage = (): ReactElement => {
   return (

@@ -9,7 +9,7 @@ import Layout from '@Layout/Layout'
 import HomePage from '@Pages/Home/HomePage'
 import { SignInPage, SignUpPage } from '@Pages/Auth'
 import { NotFoundPage } from '@Pages/Error'
-import { ROUTES } from './config'
+import { ROUTES } from './routes'
 
 const ROUTER = createBrowserRouter(
   createRoutesFromElements(
