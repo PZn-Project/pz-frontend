@@ -1,3 +1,5 @@
+@import 'src/styles/variable.scss';
+
 .button {
   border: none;
   border-radius: $radius-4;
@@ -5,7 +7,7 @@
   cursor: pointer;
 
   &:hover {
-    box-shadow: $shadow-l;
+    box-shadow: $shadow-s;
   }
 
   &:active {
@@ -19,14 +21,14 @@
   padding: 6.5px $space-24;
   font-size: $header-16;
   font-weight: $weight-medium;
-  color: $color-font-l;
+  color: $color-black;
 }
 
 .medium {
   padding: $space-8 $space-24;
   font-size: $header-18;
   font-weight: $weight-medium;
-  color: $color-font-l;
+  color: $color-black;
 }
 
 .disabled {

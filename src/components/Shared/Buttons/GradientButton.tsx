@@ -1,6 +1,6 @@
 import { type ReactElement, ReactNode } from 'react';
 import clsx from 'clsx';
-import styles from './GradientButton.module.css';
+import styles from './GradientButton.module.scss';
 
 type Props = {
   size: 'small' | 'medium';
