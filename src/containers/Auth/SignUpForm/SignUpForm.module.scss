@@ -1,0 +1,74 @@
+@import 'src/styles/variable.scss';
+
+.form {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: $radius-24;
+  background-image: url('/public/auth/singup.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  box-shadow: $shadow-m;
+
+  @include maxWidth($bp-mobile) {
+    border-radius: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.container {
+  position: relative;
+  margin-top: $space-48;
+  margin-bottom: $space-48;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: $space-32;
+}
+
+.inputs {
+  width: 100%;
+  min-height: 210px;
+  margin-top: $space-16;
+  padding: 0 $space-48;
+
+  @include maxWidth($bp-mobile) {
+    padding: 0 $space-24;
+  }
+}
+
+.links {
+  & a {
+    color: $color-white;
+
+    &:hover {
+      color: $color-pl;
+    }
+  }
+
+  & span {
+    color: $color-pl;
+  }
+}
+
+.input {
+  & div {
+    background-color: $color-white;
+  }
+}

@@ -1,7 +1,7 @@
 @import 'src/styles/variable.scss';
 
 .imageContainer {
-  margin: $space-uh auto;
+  margin: $space-248 auto;
 }
 
 .image {
@@ -12,20 +12,20 @@
 }
 
 .messageContainer {
-  margin: $space-xh auto;
+  margin: $space-128 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   h2 {
-    margin-top: $space-l;
+    margin-top: $space-48;
     text-align: center;
-    font-size: $header-h;
+    font-size: $header-32;
     color: $color-gray-800;
 
     @include maxWidth($bp-mobile) {
-      font-size: $header-m;
+      font-size: $header-20;
     }
   }
 }

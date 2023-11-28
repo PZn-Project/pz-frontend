@@ -62,8 +62,8 @@
   align-self: center;
   display: flex;
   flex-direction: column;
-  gap: $space-s;
-  border-radius: $radius-m;
+  gap: $space-16;
+  border-radius: $radius-16;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
   @include maxWidth($bp-mobile) {
@@ -74,27 +74,27 @@
 
   &Left {
     margin-left: 184px;
-    padding: $space-m $space-m $space-m 130px;
+    padding: $space-24 $space-24 $space-24 130px;
 
     @include maxWidth($bp-mobile) {
       margin: 0;
-      padding: $space-xl $space-m $space-m $space-m;
+      padding: $space-64 $space-24 $space-24 $space-24;
     }
   }
 
   &Right {
     margin-right: 184px;
-    padding: $space-m 130px $space-m $space-m;
+    padding: $space-24 130px $space-24 $space-24;
 
     @include maxWidth($bp-mobile) {
       margin: 0;
-      padding: $space-xl $space-m $space-m $space-m;
+      padding: $space-64 $space-24 $space-24 $space-24;
     }
   }
 
   h3 {
     margin: 0;
-    font-size: $header-l;
+    font-size: $header-24;
     font-weight: $weight-medium;
 
     @include maxWidth($bp-mobile) {
@@ -104,13 +104,13 @@
 
   p {
     margin: 0;
-    font-size: $font-m;
+    font-size: $font-16;
   }
 
   svg {
     width: 32px;
     height: 32px;
-    margin-right: $space-s;
+    margin-right: $space-16;
     transform: translateY(5px);
     fill: $color-pd;
   }
