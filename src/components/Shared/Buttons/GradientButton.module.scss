@@ -3,7 +3,7 @@
 .button {
   border: none;
   border-radius: $radius-4;
-  background: linear-gradient(60deg, $color-pd, $color-sd 85%);
+  background: linear-gradient(60deg, $color-pl 30%, $color-sl );
   cursor: pointer;
 
   &:hover {
@@ -13,7 +13,7 @@
   &:active {
     box-shadow: none;
     transform: translateY(1px);
-    background: $color-pd;
+    background: $color-pl;
   }
 }
 
@@ -21,14 +21,14 @@
   padding: 6.5px $space-24;
   font-size: $header-16;
   font-weight: $weight-medium;
-  color: $color-black;
+  color: $color-white;
 }
 
 .medium {
   padding: $space-8 $space-24;
   font-size: $header-18;
   font-weight: $weight-medium;
-  color: $color-black;
+  color: $color-white;
 }
 
 .disabled {

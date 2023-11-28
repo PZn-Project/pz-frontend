@@ -55,26 +55,29 @@ export function SignUpForm(): ReactElement {
 
   return (
     <form className={styles.form} onSubmit={onSubmit}>
-      <AuthHeader headre="Sign Up" text="Create Your Account" />
-      <div className={styles.inputs}>
-        {SIGN_UP_FIELDS.map((input) => (
-          <BaseInput
-            key={input.id}
-            {...input}
-            onChange={onChange}
-            value={values[input.name]}
-            error={errors[input.name] || validationErrors[input.name]}
-          />
-        ))}
-      </div>
-      <GradientButton size="small" type="submit" disabled={isPending}>
-        Sign Up
-      </GradientButton>
+      <div className={styles.container}>
+        <AuthHeader headre="Stwórz nowe konto" />
+        <div className={styles.inputs}>
+          {SIGN_UP_FIELDS.map((input) => (
+            <BaseInput
+              key={input.id}
+              {...input}
+              onChange={onChange}
+              value={values[input.name]}
+              error={errors[input.name] || validationErrors[input.name]}
+              className={styles.input}
+            />
+          ))}
+        </div>
+        <GradientButton size="small" type="submit" disabled={isPending}>
+          Zarejestruj się
+        </GradientButton>
 
-      <div className={styles.links}>
-        <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-        <span>|</span>
-        <Link to={ROUTES.HOME}>Recovery</Link>
+        <div className={styles.links}>
+          <Link to={ROUTES.SIGN_IN}>Zaloguj się</Link>
+          <span> | </span>
+          <Link to={ROUTES.HOME}>Odzyskaj konto</Link>
+        </div>
       </div>
     </form>
   )

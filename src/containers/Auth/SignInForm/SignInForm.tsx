@@ -29,25 +29,28 @@ export function SignInForm(): ReactElement {
 
   return (
     <form className={styles.form} onSubmit={onSubmit}>
-      <AuthHeader headre="Sign In" text="Login Into Your Account" />
-      <div className={styles.inputs}>
-        {SIGN_IN_FIELDS.map((input) => (
-          <BaseInput
-            key={input.id}
-            {...input}
-            onChange={onChange}
-            value={values[input.name]}
-          />
-        ))}
-      </div>
-      <GradientButton size="small" type="submit" disabled={isPending}>
-        Sign In
-      </GradientButton>
+      <div className={styles.container}>
+        <AuthHeader headre="Zaloguj się do konta" />
+        <div className={styles.inputs}>
+          {SIGN_IN_FIELDS.map((input) => (
+            <BaseInput
+              key={input.id}
+              {...input}
+              onChange={onChange}
+              value={values[input.name]}
+              className={styles.input}
+            />
+          ))}
+        </div>
+        <GradientButton size="small" type="submit" disabled={isPending}>
+          Zaloguj się
+        </GradientButton>
 
-      <div className={styles.links}>
-        <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
-        <span>|</span>
-        <Link to={ROUTES.HOME}>Recovery</Link>
+        <div className={styles.links}>
+          <Link to={ROUTES.SIGN_UP}>Zarejestruj się</Link>
+          <span> | </span>
+          <Link to={ROUTES.HOME}>Odzyskaj konto</Link>
+        </div>
       </div>
     </form>
   )

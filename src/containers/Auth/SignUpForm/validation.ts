@@ -31,23 +31,23 @@ export function validateInputs({
 
 function validateEmail(email: string): string {
   const regex = /^\S+@\S+\.\S+$/
-  const message = 'Please enter correct email address.'
+  const message = 'Wprowadź prawidłowy adres Email.'
   return regex.test(email) ? '' : message
 }
 
 function validateUsername(username: string): string {
-  return username.length >= 3 ? '' : 'Username is to short.'
+  return username.length >= 3 ? '' : 'Nazwa użytkownika jest zbyt krótka.'
 }
 
 function validatePassword(password: string): string {
   return password.length >= 8
     ? ''
-    : 'Password must be at least 8 characters long.'
+    : 'Hasło powinno składać się minimum z 8 znaków.'
 }
 
 function validateConfirmPassword(
   password: string,
   confirmPassword: string,
 ): string {
-  return password === confirmPassword ? '' : "Password don't match."
+  return password === confirmPassword ? '' : "Wprowadzone hasła nie są identyczne."
 }

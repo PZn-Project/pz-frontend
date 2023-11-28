@@ -45,7 +45,7 @@ export const HeroSection = (): ReactElement => {
 
       <div className={styles['heroElement-10']}>
         <Link className={styles.heroLink} to={ROUTES.SIGN_UP}>
-          Join Now
+          Dołącz teraz
         </Link>
       </div>
     </section>

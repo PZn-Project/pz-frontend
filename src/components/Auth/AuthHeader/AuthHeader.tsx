@@ -6,17 +6,15 @@ import logo from '@Assets/svg/logo-white.svg'
 
 type Props = {
   headre: string
-  text: string
   className?: string
 }
 
-export function AuthHeader({ headre, text, className }: Props): ReactElement {
+export function AuthHeader({ headre, className }: Props): ReactElement {
   return (
     <div className={clsx(styles.container, className)}>
-      <img src={logo} alt="Cosmo PK logo." />
-      <h2>{headre}</h2>
+      <img src={logo} alt="Logo FunFits." />
       <hr />
-      <p>{text}</p>
+      <h2>{headre}</h2>
     </div>
   )
 }
