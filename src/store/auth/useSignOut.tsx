@@ -10,7 +10,7 @@ type UseSignOut = {
   signOutMutation: VoidFunction
 }
 
-export function useSignOut(): UseSignOut {
+export const useSignOut = (): UseSignOut => {
   const queryClient = useQueryClient()
   const navigate = useNavigate()
 

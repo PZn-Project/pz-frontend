@@ -10,7 +10,7 @@ type UseUser = {
   authData: Nullable<AuthData>
 }
 
-export function useUser(): UseUser {
+export const useUser = (): UseUser => {
   const storedUser = userDataStorage.getUser()
 
   const { data: authData } = useQuery({

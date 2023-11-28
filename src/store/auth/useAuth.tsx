@@ -16,7 +16,7 @@ type UseAuth = {
   isLoading: boolean
 }
 
-export function useAuth(): UseAuth {
+export const useAuth = (): UseAuth => {
   const queryClient = useQueryClient()
   const navigate = useNavigate()
 
@@ -55,9 +55,9 @@ export function useAuth(): UseAuth {
   }
 }
 
-export async function getUser(
+export const getUser = async (
   authData: Nullish<AuthData>,
-): Promise<Nullable<AuthData>> {
+): Promise<Nullable<AuthData>> => {
   if (!authData) {
     return null
   }

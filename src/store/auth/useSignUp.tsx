@@ -34,7 +34,7 @@ type UseSignUp = {
   error: Nullable<AxiosError<SignUpError | ErrorMessage>>
 }
 
-export function useSignUp(): UseSignUp {
+export const useSignUp = (): UseSignUp => {
   const navigate = useNavigate()
   const { enqueueSnackbar } = useSnackbar()
 
@@ -60,7 +60,7 @@ export function useSignUp(): UseSignUp {
   return { signUpMutation, isPending, error }
 }
 
-async function signUp(body: SignUpBody): Promise<SuccesMessage> {
+const signUp = async (body: SignUpBody): Promise<SuccesMessage> => {
   const { data } = await axios.post<SuccesMessage>(
     `${process.env.API_URL}/auth/signup`,
     body,

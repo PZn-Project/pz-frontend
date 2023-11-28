@@ -27,7 +27,7 @@ type UseSignIn = {
   >
 }
 
-export function useSignIn(): UseSignIn {
+export const useSignIn = (): UseSignIn => {
   const queryClient = useQueryClient()
   const navigate = useNavigate()
 
@@ -51,7 +51,7 @@ export function useSignIn(): UseSignIn {
   return { signInMutation, isPending }
 }
 
-async function signIn(body: SignInBody): Promise<AuthData> {
+const signIn = async (body: SignInBody): Promise<AuthData> => {
   const { data } = await axios.post<AuthData>(
     `${process.env.API_URL}/auth/signin`,
     body,
