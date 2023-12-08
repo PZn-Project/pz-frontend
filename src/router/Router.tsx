@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 import Layout from '@Layout/Layout'
 import HomePage from '@Pages/Home/HomePage'
-import { ProfilePage, SignInPage, SignUpPage } from '@Pages/Auth'
+import { ProfilePage, SignInPage, SignUpPage, RecoveryPage } from '@Pages/Auth'
 import { NotFoundPage } from '@Pages/Error'
 
 import { ROUTES } from './routes'
@@ -24,6 +24,7 @@ const ROUTER = createBrowserRouter(
       <Route element={<PublicRoute />}>
         <Route path={ROUTES.SIGN_UP} element={<SignUpPage />} />
         <Route path={ROUTES.SIGN_IN} element={<SignInPage />} />
+        <Route path={ROUTES.RECOVERY} element={<RecoveryPage />} />
       </Route>
     </Route>,
   ),

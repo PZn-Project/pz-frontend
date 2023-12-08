@@ -49,7 +49,7 @@ export function SignInForm(): ReactElement {
         <div className={styles.links}>
           <Link to={ROUTES.SIGN_UP}>Zarejestruj się</Link>
           <span> | </span>
-          <Link to={ROUTES.HOME}>Odzyskaj konto</Link>
+          <Link to={ROUTES.RECOVERY}>Odzyskaj konto</Link>
         </div>
       </div>
     </form>

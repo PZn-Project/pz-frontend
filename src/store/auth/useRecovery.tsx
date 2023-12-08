@@ -11,44 +11,40 @@ import {
 } from '@Utils/types'
 import { ROUTES } from '@Router/routes'
 
-export type SignUpBody = {
-  username: string
+export type RecoveryBody = {
   email: string
-  password: string
 }
 
-export type SignUpError = ValidationError<{
-  username?: string
+export type RecoveryError = ValidationError<{
   email?: string
-  password?: string
 }>
 
-type UseSignUp = {
+type UseRecovery = {
   isPending: boolean
-  signUpMutation: UseMutateFunction<
+  recoveryMutation: UseMutateFunction<
     SuccesMessage,
-    AxiosError<SignUpError | ErrorMessage>,
-    SignUpBody,
+    AxiosError<RecoveryError | ErrorMessage>,
+    RecoveryBody,
     unknown
   >
-  error: Nullable<AxiosError<SignUpError | ErrorMessage>>
+  error: Nullable<AxiosError<RecoveryError | ErrorMessage>>
 }
 
-export const useSignUp = (): UseSignUp => {
+export const useRecovery = (): UseRecovery => {
   const navigate = useNavigate()
   const { enqueueSnackbar } = useSnackbar()
 
   const {
-    mutate: signUpMutation,
+    mutate: recoveryMutation,
     isPending,
     error,
   } = useMutation<
     SuccesMessage,
-    AxiosError<SignUpError | ErrorMessage>,
-    SignUpBody,
+    AxiosError<RecoveryError | ErrorMessage>,
+    RecoveryBody,
     unknown
   >({
-    mutationFn: (body) => signUp(body),
+    mutationFn: (body) => recovery(body),
     onSuccess: () => {
       navigate(ROUTES.SIGN_IN)
     },
@@ -57,12 +53,12 @@ export const useSignUp = (): UseSignUp => {
     },
   })
 
-  return { signUpMutation, isPending, error }
+  return { recoveryMutation, isPending, error }
 }
 
-const signUp = async (body: SignUpBody): Promise<SuccesMessage> => {
+const recovery = async (body: RecoveryBody): Promise<SuccesMessage> => {
   const { data } = await axios.post<SuccesMessage>(
-    `${process.env.API_URL}/auth/registery`,
+    `${process.env.API_URL}/auth/recovery`,
     body,
   )
   console.log(data)

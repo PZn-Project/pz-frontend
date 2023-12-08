@@ -76,7 +76,7 @@ export function SignUpForm(): ReactElement {
         <div className={styles.links}>
           <Link to={ROUTES.SIGN_IN}>Zaloguj się</Link>
           <span> | </span>
-          <Link to={ROUTES.HOME}>Odzyskaj konto</Link>
+          <Link to={ROUTES.RECOVERY}>Odzyskaj konto</Link>
         </div>
       </div>
     </form>
