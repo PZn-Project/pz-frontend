@@ -53,9 +53,10 @@ export const useSignIn = (): UseSignIn => {
 
 const signIn = async (body: SignInBody): Promise<AuthData> => {
   const { data } = await axios.post<AuthData>(
-    `${process.env.API_URL}/auth/signin`,
+    `${process.env.API_URL}/auth/login`,
     body,
   )
+  console.log(data)
 
   return data
 }
