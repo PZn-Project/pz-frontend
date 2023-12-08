@@ -4,4 +4,5 @@ export const ROUTES = Object.freeze({
   SIGN_UP: '/signup',
   PROFILE: '/profile',
   RECOVERY: '/recovery',
+  RESET: '/reset',
 })

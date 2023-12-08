@@ -9,36 +9,37 @@ import {
   Nullable,
 } from '@Utils/types'
 
-export type RecoveryBody = {
-  email: string
+export type ResetPasswordBody = {
+  password: string
+  token: string
 }
 
-export type RecoveryError = ValidationError<{
-  email?: string
+export type ResetPasswordError = ValidationError<{
+  password?: string
 }>
 
-type UseRecovery = {
+type UseResetPassword = {
   isPending: boolean
-  recoveryMutation: UseMutateFunction<
+  resetPasswordMutation: UseMutateFunction<
     SuccesMessage,
-    AxiosError<RecoveryError | ErrorMessage>,
-    RecoveryBody,
+    AxiosError<ResetPasswordError | ErrorMessage>,
+    ResetPasswordBody,
     unknown
   >
-  error: Nullable<AxiosError<RecoveryError | ErrorMessage>>
+  error: Nullable<AxiosError<ResetPasswordError | ErrorMessage>>
 }
 
-export const useRecovery = (): UseRecovery => {
+export const useResetPassword = (): UseResetPassword => {
   const { enqueueSnackbar } = useSnackbar()
 
   const {
-    mutate: recoveryMutation,
+    mutate: resetPasswordMutation,
     isPending,
     error,
   } = useMutation<
     SuccesMessage,
-    AxiosError<RecoveryError | ErrorMessage>,
-    RecoveryBody,
+    AxiosError<ResetPasswordError | ErrorMessage>,
+    ResetPasswordBody,
     unknown
   >({
     mutationFn: (body) => recovery(body),
@@ -50,12 +51,12 @@ export const useRecovery = (): UseRecovery => {
     },
   })
 
-  return { recoveryMutation, isPending, error }
+  return { resetPasswordMutation, isPending, error }
 }
 
-const recovery = async (body: RecoveryBody): Promise<SuccesMessage> => {
+const recovery = async (body: ResetPasswordBody): Promise<SuccesMessage> => {
   const { data } = await axios.post<SuccesMessage>(
-    `${process.env.API_URL}/auth/recovery`,
+    `${process.env.API_URL}/auth/reset`,
     body,
   )
   console.log(data)
