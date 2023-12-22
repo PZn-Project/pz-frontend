@@ -11,7 +11,7 @@ export const ErrorPage = (): ReactElement => {
           alt="Internal server error."
           className={styles.image}
         />
-        <h2>Something went wrong !</h2>
+        <h2>Upss, cos poszło nie tak !</h2>
       </div>
     </WidePageLayout>
   )
