@@ -46,7 +46,10 @@ export const useRecovery = (): UseRecovery => {
       enqueueSnackbar(data.message)
     },
     onError: (error) => {
-      enqueueSnackbar(error)
+      enqueueSnackbar({
+        message: error.message,
+        variant: 'error',
+      })
     },
   })
 
