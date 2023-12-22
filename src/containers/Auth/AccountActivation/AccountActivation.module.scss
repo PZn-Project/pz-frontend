@@ -1,0 +1,42 @@
+@import 'src/styles/variable.scss';
+
+.imageContainer {
+  margin: $space-248 auto;
+}
+
+.image {
+  @include maxWidth($bp-mobile) {
+    width: 228px;
+    height: 228px;
+  }
+}
+
+.messageContainer {
+  margin: $space-128 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.succes {
+  margin-top: $space-48;
+  text-align: center;
+  font-size: $header-32;
+  color: $color-gray-800;
+
+  @include maxWidth($bp-mobile) {
+    font-size: $header-20;
+  }
+}
+
+.error {
+  margin-top: $space-48;
+  text-align: center;
+  font-size: $header-32;
+  color: $color-rd;
+
+  @include maxWidth($bp-mobile) {
+    font-size: $header-20;
+  }
+}

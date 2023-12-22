@@ -13,6 +13,7 @@ import {
   SignUpPage,
   RecoveryPage,
   ResetPasswordPage,
+  ActivationPage,
 } from '@Pages/Auth'
 import { NotFoundPage } from '@Pages/Error'
 
@@ -32,6 +33,7 @@ const ROUTER = createBrowserRouter(
         <Route path={ROUTES.SIGN_IN} element={<SignInPage />} />
         <Route path={ROUTES.RECOVERY} element={<RecoveryPage />} />
         <Route path={ROUTES.RESET} element={<ResetPasswordPage />} />
+        <Route path={ROUTES.ACTIVATE} element={<ActivationPage />} />
       </Route>
     </Route>,
   ),
