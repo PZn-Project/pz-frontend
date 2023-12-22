@@ -53,7 +53,10 @@ export const useSignUp = (): UseSignUp => {
       navigate(ROUTES.SIGN_IN)
     },
     onError: (error) => {
-      enqueueSnackbar(error)
+      enqueueSnackbar({
+        message: error.message,
+        variant: 'error',
+      })
     },
   })
 
@@ -62,7 +65,7 @@ export const useSignUp = (): UseSignUp => {
 
 const signUp = async (body: SignUpBody): Promise<SuccesMessage> => {
   const { data } = await axios.post<SuccesMessage>(
-    `${process.env.API_URL}/auth/registery`,
+    `${process.env.API_URL}/auth/register`,
     body,
   )
   console.log(data)

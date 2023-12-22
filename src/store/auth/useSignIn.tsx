@@ -4,6 +4,7 @@ import {
   useQueryClient,
 } from '@tanstack/react-query'
 import { useNavigate } from 'react-router-dom'
+import { useSnackbar } from 'notistack'
 
 import * as userDataStorage from './utils/userDataStorage'
 import axios, { AxiosError } from 'axios'
@@ -30,6 +31,7 @@ type UseSignIn = {
 export const useSignIn = (): UseSignIn => {
   const queryClient = useQueryClient()
   const navigate = useNavigate()
+  const { enqueueSnackbar } = useSnackbar()
 
   const { mutate: signInMutation, isPending } = useMutation<
     AuthData,
@@ -44,7 +46,10 @@ export const useSignIn = (): UseSignIn => {
       navigate(ROUTES.HOME)
     },
     onError: (error) => {
-      console.log(error)
+      enqueueSnackbar({
+        message: error.message,
+        variant: 'error',
+      })
     },
   })
 
