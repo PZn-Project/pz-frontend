@@ -14,7 +14,9 @@ export function RecoveryForm(): ReactElement {
   const { recoveryMutation, isPending } = useRecovery()
   const [value, setValue] = useState('')
 
-  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const onChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
+  ) => {
     setValue(e.target.value)
   }
 

@@ -32,7 +32,9 @@ export function SignUpForm(): ReactElement {
   const [values, setValues] = useState(initialState)
   const [errors, setErrors] = useState(initialState)
 
-  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const onChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
+  ) => {
     setValues((state) => ({ ...state, [e.target.name]: e.target.value }))
     setErrors((state) => ({ ...state, [e.target.name]: '' }))
   }

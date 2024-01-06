@@ -6,6 +6,8 @@ export const ROUTES = Object.freeze({
   ACTIVATE: '/activate',
   RECOVERY: '/recovery',
   RESET: '/reset',
+  CLUB_ADD: '/club-add',
+  CLUBS: '/clubs',
   PROFILE: '/profile',
   SEARCH: '/search',
   TEAMS: '/teams',
