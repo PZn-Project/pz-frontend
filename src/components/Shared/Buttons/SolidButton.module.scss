@@ -3,7 +3,6 @@
 .button {
   border: none;
   border-radius: $radius-4;
-  background: $color-pd;
   cursor: pointer;
 
   &:hover {
@@ -13,19 +12,20 @@
   &:active {
     box-shadow: none;
     transform: translateY(1px);
-    background: $color-pl;
   }
 }
 
 .small {
-  padding: 6.5px $space-24;
+  height: 32px;
+  padding: 0 $space-24;
   font-size: $header-16;
   font-weight: $weight-medium;
   color: $color-white;
 }
 
 .medium {
-  padding: $space-8 $space-24;
+  height: 48px;
+  padding: 0 $space-24;
   font-size: $header-18;
   font-weight: $weight-medium;
   color: $color-white;
@@ -42,5 +42,26 @@
     transform: none;
     box-shadow: none;
     background: $color-gray-400;
+  }
+}
+
+.colorPD {
+  background: $color-pd;
+  &:active {
+    background: $color-pl;
+  }
+}
+
+.colorSD {
+  background: $color-sd;
+  &:active {
+    background: $color-sl;
+  }
+}
+
+.colorRD {
+  background: $color-rd;
+  &:active {
+    background: $color-rl;
   }
 }

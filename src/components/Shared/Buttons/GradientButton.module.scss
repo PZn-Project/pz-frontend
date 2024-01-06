@@ -3,7 +3,7 @@
 .button {
   border: none;
   border-radius: $radius-4;
-  background: linear-gradient(60deg, $color-pl 30%, $color-sl );
+  background: linear-gradient(60deg, $color-pl 30%, $color-sl);
   cursor: pointer;
 
   &:hover {
@@ -18,14 +18,16 @@
 }
 
 .small {
-  padding: 6.5px $space-24;
+  height: 32px;
+  padding: 0 $space-16;
   font-size: $header-16;
   font-weight: $weight-medium;
   color: $color-white;
 }
 
 .medium {
-  padding: $space-8 $space-24;
+  height: 48px;
+  padding: 0 $space-24;
   font-size: $header-18;
   font-weight: $weight-medium;
   color: $color-white;

@@ -29,10 +29,18 @@ export function UserProfile(): Nullable<ReactElement> {
         </p>
       </div>
       <div className={styles.actions}>
-        <SolidButton size="small">Edytuj Zjęcie</SolidButton>
-        <SolidButton size="small">Zmień Email</SolidButton>
-        <SolidButton size="small">Zmień Hasło</SolidButton>
-        <SolidButton size="small">Usuń Konto</SolidButton>
+        <SolidButton size="small" color="primary">
+          Edytuj Zjęcie
+        </SolidButton>
+        <SolidButton size="small" color="primary">
+          Zmień Email
+        </SolidButton>
+        <SolidButton size="small" color="primary">
+          Zmień Hasło
+        </SolidButton>
+        <SolidButton size="small" color="red">
+          Usuń Konto
+        </SolidButton>
       </div>
     </article>
   )

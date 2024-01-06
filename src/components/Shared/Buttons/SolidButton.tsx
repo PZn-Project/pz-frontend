@@ -5,8 +5,9 @@ import styles from './SolidButton.module.scss'
 type Props = {
   size: 'small' | 'medium'
   children: ReactNode
+  color: 'primary' | 'secondary' | 'red'
   className?: string
-  onClick?: () => VoidFunction
+  onClick?: () => void
   type?: 'button' | 'submit' | 'reset'
   disabled?: boolean
 }
@@ -14,12 +15,16 @@ type Props = {
 export const SolidButton = ({
   size,
   children,
+  color,
   className,
   onClick,
   type = 'button',
   disabled = false,
 }: Props): ReactElement => {
   const buttonClassNames = clsx(styles.button, styles[size], className, {
+    [styles.colorPD]: color === 'primary',
+    [styles.colorSD]: color === 'secondary',
+    [styles.colorRD]: color === 'red',
     [styles.disabled]: disabled,
   })
 

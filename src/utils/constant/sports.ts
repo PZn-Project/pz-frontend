@@ -57,3 +57,16 @@ export const sports: SelectOption[] = [
     value: 'golf',
   },
 ]
+
+export const SPORTS_NAMES = {
+  soccer: 'Piłka nożna',
+  volleyball: 'Siatkówka',
+  basketball: 'Koszykówka',
+  handball: 'Piłka ręczna',
+  football: 'Futbol amerykański',
+  tennis: 'Tenis',
+  hockey: 'Hokej',
+  rugby: 'Rugby',
+  cycling: 'Kolarstwo',
+  golf: 'Golf',
+}
