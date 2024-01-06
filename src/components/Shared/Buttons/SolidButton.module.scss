@@ -1,0 +1,46 @@
+@import 'src/styles/variable.scss';
+
+.button {
+  border: none;
+  border-radius: $radius-4;
+  background: $color-pd;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: $shadow-s;
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(1px);
+    background: $color-pl;
+  }
+}
+
+.small {
+  padding: 6.5px $space-24;
+  font-size: $header-16;
+  font-weight: $weight-medium;
+  color: $color-white;
+}
+
+.medium {
+  padding: $space-8 $space-24;
+  font-size: $header-18;
+  font-weight: $weight-medium;
+  color: $color-white;
+}
+
+.disabled {
+  background: $color-gray-400;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:active {
+    transform: none;
+    box-shadow: none;
+    background: $color-gray-400;
+  }
+}

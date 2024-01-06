@@ -1,13 +1,16 @@
 import { type ReactElement } from 'react'
-import WidePageLayout from '@Layout/Page/WidePageLayout'
+
 import CenteredContentLayout from '@Layout/Content/CenteredContentLayout'
+
+import { UserProfile } from '@Containers/Auth'
+import BlankPageLayout from '@Layout/Page/BlankPageLayout'
 
 export const ProfilePage = (): ReactElement => {
   return (
-    <WidePageLayout>
+    <BlankPageLayout>
       <CenteredContentLayout>
-        <h2>User Profile</h2>
+        <UserProfile />
       </CenteredContentLayout>
-    </WidePageLayout>
+    </BlankPageLayout>
   )
 }
