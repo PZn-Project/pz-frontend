@@ -6,7 +6,7 @@ export function Logout(): ReactElement {
   return (
     <div className={styles.messageContainer}>
       <img
-        src="./common/internal_server_error.png"
+        src="./common/logout.png"
         alt="Internal server error."
         className={styles.image}
       />

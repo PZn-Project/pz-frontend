@@ -13,7 +13,7 @@ export default defineConfig({
     'process.env': {
       VITE_SECURE_LOCAL_STORAGE_HASH_KEY: 'SECRET_KEY',
       VITE_SECURE_LOCAL_STORAGE_PREFIX: 'SECRET_PREFIX',
-      API_URL: 'http://localhost:8085',
+      API_URL: 'http://localhost:8078',
     },
   },
 })

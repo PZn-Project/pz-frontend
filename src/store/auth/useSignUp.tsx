@@ -9,6 +9,7 @@ import {
   ErrorMessage,
   Nullable,
 } from '@Utils/types'
+import { extractErrorMessages } from '@Utils/functions'
 import { ROUTES } from '@Router/routes'
 
 export type SignUpBody = {
@@ -49,12 +50,16 @@ export const useSignUp = (): UseSignUp => {
     unknown
   >({
     mutationFn: (body) => signUp(body),
-    onSuccess: () => {
+    onSuccess: (data) => {
+      enqueueSnackbar({
+        message: data.message,
+        variant: 'success',
+      })
       navigate(ROUTES.SIGN_IN)
     },
     onError: (error) => {
       enqueueSnackbar({
-        message: error.message,
+        message: extractErrorMessages(error),
         variant: 'error',
       })
     },

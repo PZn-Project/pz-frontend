@@ -14,6 +14,7 @@ import {
   RecoveryPage,
   ResetPasswordPage,
   ActivationPage,
+  LogoutPage,
 } from '@Pages/Auth'
 import { NotFoundPage } from '@Pages/Error'
 
@@ -24,16 +25,21 @@ import PublicRoute from './PublicRoute'
 const ROUTER = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />} errorElement={<NotFoundPage />}>
-      <Route path={ROUTES.HOME} element={<HomePage />} />
       <Route element={<ProtectedRoute />}>
         <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
+        <Route path={ROUTES.SEARCH} element={<ProfilePage />} />
+        <Route path={ROUTES.TEAMS} element={<ProfilePage />} />
+        <Route path={ROUTES.GAMES} element={<ProfilePage />} />
+        <Route path={ROUTES.INVITATIONS} element={<ProfilePage />} />
       </Route>
       <Route element={<PublicRoute />}>
+        <Route path={ROUTES.HOME} element={<HomePage />} />
         <Route path={ROUTES.SIGN_UP} element={<SignUpPage />} />
         <Route path={ROUTES.SIGN_IN} element={<SignInPage />} />
         <Route path={ROUTES.RECOVERY} element={<RecoveryPage />} />
         <Route path={ROUTES.RESET} element={<ResetPasswordPage />} />
         <Route path={ROUTES.ACTIVATE} element={<ActivationPage />} />
+        <Route path={ROUTES.LOGOUT} element={<LogoutPage />} />
       </Route>
     </Route>,
   ),

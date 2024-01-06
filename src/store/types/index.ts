@@ -5,5 +5,6 @@ export type AuthData = {
   type: string
   roles: string[]
   token: string
+  image:string
   expirationDate: string
 }
