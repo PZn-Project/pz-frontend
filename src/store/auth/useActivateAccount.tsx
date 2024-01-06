@@ -3,6 +3,7 @@ import axios, { AxiosError } from 'axios'
 import { useSnackbar } from 'notistack'
 
 import { ErrorMessage, Nullable, SuccesMessage } from '@Utils/types'
+import { extractErrorMessages } from '@Utils/functions'
 
 export type ActivateAccountBody = {
   token: string
@@ -37,7 +38,7 @@ export function useActivateAccount(): UseActivateAccount {
     mutationFn: (body) => activateAccount(body),
     onError: (error) => {
       enqueueSnackbar({
-        message: error.message,
+        message: extractErrorMessages(error),
         variant: 'error',
       })
     },

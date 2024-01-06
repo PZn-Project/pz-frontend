@@ -8,6 +8,7 @@ import {
   ErrorMessage,
   Nullable,
 } from '@Utils/types'
+import { extractErrorMessages } from '@Utils/functions'
 
 export type RecoveryBody = {
   email: string
@@ -47,7 +48,7 @@ export const useRecovery = (): UseRecovery => {
     },
     onError: (error) => {
       enqueueSnackbar({
-        message: error.message,
+        message: extractErrorMessages(error),
         variant: 'error',
       })
     },

@@ -60,6 +60,17 @@
   }
 }
 
+.button {
+  border: none;
+  background-color: transparent;
+  color: $color-gray-600;
+  font-size: $header-18;
+
+  &:hover {
+    color: $color-black;
+  }
+}
+
 .navButton {
   display: none;
   border: none;

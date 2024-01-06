@@ -1,10 +1,9 @@
 import type { IconType } from 'react-icons'
-import { FaLock } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
+import { FaLock, FaUser } from 'react-icons/fa'
 
 type SignInFields = {
   id: string
-  name: 'email' | 'password'
+  name: 'username' | 'password'
   type: string
   placeholder: string
   required: boolean
@@ -14,11 +13,11 @@ type SignInFields = {
 export const SIGN_IN_FIELDS: SignInFields[] = [
   {
     id: '1',
-    name: 'email',
-    type: 'email',
-    placeholder: 'Email',
+    name: 'username',
+    type: 'text',
+    placeholder: 'Nazwa użytkownika',
     required: true,
-    Icon: MdEmail,
+    Icon: FaUser,
   },
   {
     id: '2',

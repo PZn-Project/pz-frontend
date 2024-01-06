@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
-import axios from 'axios'
+//import axios from 'axios'
 
 import { Nullable, Nullish } from '@Utils/types'
 import { ROUTES } from '@Router/routes'
@@ -30,7 +30,7 @@ export const useAuth = (): UseAuth => {
     refetchOnMount: false,
     refetchOnReconnect: false,
     refetchOnWindowFocus: false,
-    placeholderData: userDataStorage.getUser(),
+    initialData: userDataStorage.getUser(),
   })
 
   useEffect(() => {
@@ -62,11 +62,11 @@ export const getUser = async (
     return null
   }
 
-  const { data } = await axios.get(`${process.env.API_URL}/auth/whoami`, {
-    headers: {
-      Authorization: `Bearer ${authData.token}`,
-    },
-  })
+  // const { data } = await axios.get(`${process.env.API_URL}/auth/whoami`, {
+  //   headers: {
+  //     Authorization: `Bearer ${authData.token}`,
+  //   },
+  // })
 
-  return data
+  return authData
 }

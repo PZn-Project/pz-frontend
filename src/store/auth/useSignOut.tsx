@@ -17,7 +17,7 @@ export const useSignOut = (): UseSignOut => {
   const signOutMutation = useCallback(() => {
     userDataStorage.removeUser()
     queryClient.setQueryData([QUERY_KEY.USER], null)
-    navigate(ROUTES.SIGN_IN)
+    navigate(ROUTES.LOGOUT)
   }, [navigate, queryClient])
 
   return { signOutMutation }
