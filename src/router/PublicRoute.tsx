@@ -8,7 +8,7 @@ const PublicRoute = (): ReactElement => {
   const { authData } = useUser()
 
   if (authData) {
-    return <Navigate to={ROUTES.HOME} />
+    return <Navigate to={ROUTES.SEARCH} />
   }
 
   return <Outlet />

@@ -1,11 +1,19 @@
 import { type ReactElement } from 'react'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
+import { isNil } from 'ramda'
+
+import { useUser } from '@Store/auth'
 import logo from '@Assets/svg/logo-white.svg'
+
 import { MEDIA_LINKS, NAVIGATION_DATA } from './data'
 import styles from './Footer.module.scss'
 
 const Footer = (): ReactElement => {
+  const { authData } = useUser()
+
+  const HederType = isNil(authData) ? 'Public' : 'Auth'
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -16,7 +24,7 @@ const Footer = (): ReactElement => {
           </div>
           <nav>
             <ul className={styles.navList}>
-              {NAVIGATION_DATA.map(({ label, path }) => (
+              {NAVIGATION_DATA[HederType].map(({ label, path }) => (
                 <li key={label}>
                   <Link to={path} className={styles.navLink}>
                     {label}

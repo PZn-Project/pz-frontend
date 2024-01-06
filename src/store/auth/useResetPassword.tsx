@@ -8,6 +8,7 @@ import {
   ErrorMessage,
   Nullable,
 } from '@Utils/types'
+import { extractErrorMessages } from '@Utils/functions'
 
 export type ResetPasswordBody = {
   password: string
@@ -47,7 +48,10 @@ export const useResetPassword = (): UseResetPassword => {
       enqueueSnackbar(data.message)
     },
     onError: (error) => {
-      enqueueSnackbar(error)
+      enqueueSnackbar({
+        message: extractErrorMessages(error),
+        variant: 'error',
+      })
     },
   })
 
