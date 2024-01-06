@@ -1,0 +1,27 @@
+@import 'src/styles/variable.scss';
+
+.container {
+  max-width: 660px;
+  width: 100%;
+  padding: $space-32;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $space-32;
+  background-color: $color-white;
+  border-radius: $space-16;
+  box-shadow: $shadow-s;
+}
+
+.info {
+  h2 {
+    margin-bottom: $space-24;
+  }
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-16;
+}
