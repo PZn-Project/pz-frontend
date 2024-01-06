@@ -1,0 +1,28 @@
+@import 'src/styles/variable.scss';
+
+.section {
+  h2 {
+    display: flex;
+    align-items: center;
+    font-size: $header-24;
+    margin-bottom: $space-4;
+  }
+
+  hr {
+    margin-bottom: $space-32;
+    color: $color-gray-100;
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+    color: $color-pd;
+    margin-right: $space-16;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $space-24;
+}

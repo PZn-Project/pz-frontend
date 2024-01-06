@@ -1,11 +1,14 @@
-export type AuthData = {
+export type User = {
   id: string
   username: string
   email: string
-  type: string
   roles: string[]
+  image: string
+}
+
+export type AuthData = User & {
+  type: string
   token: string
-  image:string
   expirationDate: string
 }
 
@@ -20,4 +23,29 @@ export type ClubData = {
   street: string
   addressNumber: string
   members: string[]
+}
+
+export type UserInvitation = {
+  id: string
+  name: string
+  sport: string
+  city: string
+  logoUrl:string
+  createdAt: string
+  status: InvitationStatus
+}
+
+export type ClubInvitation = {
+  id: string
+  username: string
+  image:string
+  createdAt: string
+  status: InvitationStatus
+}
+
+
+export enum InvitationStatus {
+  REJECTED = 'REJECTED',
+  ACCEPTED = 'ACCEPTED',
+  PENDING = 'PENDING',
 }

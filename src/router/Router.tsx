@@ -17,6 +17,7 @@ import {
   LogoutPage,
 } from '@Pages/Auth'
 import { AddClubPage } from '@Pages/Club'
+import { ClubInvitationPage, UserInvitationPage } from '@Pages/Invitation'
 import { NotFoundPage } from '@Pages/Error'
 
 import { ROUTES } from './routes'
@@ -31,7 +32,11 @@ const ROUTER = createBrowserRouter(
         <Route path={ROUTES.SEARCH} element={<ProfilePage />} />
         <Route path={ROUTES.TEAMS} element={<ProfilePage />} />
         <Route path={ROUTES.GAMES} element={<ProfilePage />} />
-        <Route path={ROUTES.INVITATIONS} element={<ProfilePage />} />
+        <Route path={ROUTES.INVITATIONS} element={<UserInvitationPage />} />
+        <Route
+          path={`${ROUTES.INVITATIONS}/:clubId`}
+          element={<ClubInvitationPage />}
+        />
       </Route>
       <Route element={<PublicRoute />}>
         <Route path={ROUTES.CLUB_ADD} element={<AddClubPage />} />

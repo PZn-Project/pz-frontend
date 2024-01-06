@@ -6,7 +6,7 @@ type Props = {
   size: 'small' | 'medium'
   children: ReactNode
   className?: string
-  onClick?: () => VoidFunction
+  onClick?: () => void
   type?: 'button' | 'submit' | 'reset'
   disabled?: boolean
 }
