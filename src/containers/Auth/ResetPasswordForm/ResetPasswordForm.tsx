@@ -30,7 +30,7 @@ export function ResetPasswordForm(): ReactElement {
   const [searchParams] = useSearchParams()
   const token = searchParams.get('token') || ''
 
-  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setValues((state) => ({ ...state, [e.target.name]: e.target.value }))
     setErrors((state) => ({ ...state, [e.target.name]: '' }))
   }

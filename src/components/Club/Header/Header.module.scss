@@ -1,0 +1,15 @@
+@import 'src/styles/variable.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $space-8;
+
+  & h2 {
+    font-size: $header-24;
+    color: $color-white;
+  }
+}

@@ -18,7 +18,9 @@ export function SignInForm(): ReactElement {
     password: '',
   })
 
-  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const onChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
+  ) => {
     setValues({ ...values, [e.target.name]: e.target.value })
   }
 
